@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "419ee22e-3659-45a5-9a6b-7b35ce7e08f7",
+		"name": "MERN Stack FreeCodeCamp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getRestaurants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "getCuisines",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/v1/restaurants/cuisines",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"restaurants",
+						"cuisines"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getRestaurantById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "postReview",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"restaurant_id\": \"5eb3d668b31de5d588f4292a\",\n    \"text\": \"Great Food!\",\n    \"user_id\": \"1234\",\n    \"name\": \"beau\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/restaurants/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"restaurants",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteReview",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"1234\",\n    \"name\": \"beau\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/restaurants/review?id=62bb47f5278b2334bd497376",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"restaurants",
+						"review"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "62bb47f5278b2334bd497376"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateReview",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"review_id\": \"62bb484884acd31b58d2a685\",\n    \"text\": \"Great Food, Great Staff! Prices are good.\",\n    \"user_id\": \"1234\",\n    \"name\": \"Nana\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/v1/restaurants/review",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"v1",
+						"restaurants",
+						"review"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
