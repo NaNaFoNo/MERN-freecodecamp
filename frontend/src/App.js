@@ -55,7 +55,7 @@ function App() {
           />
           <Route 
             path="/restaurants/:id"
-            element={<Restaurant user={user} />}
+            element={<Restaurant  user={user} />}
           />
           <Route
             path="/login"
