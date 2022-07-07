@@ -1,5 +1,6 @@
-import React from 'react';
-import { Routes, Route, Link,useRoutes } from "react-router-dom";
+import { useState } from "react";
+import { Link, useRoutes } from "react-router-dom";
+// import { Routes, Route } from "react-router-dom";  // alternative Route Structure
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import AddReview from './components/add-review.js';
@@ -7,8 +8,9 @@ import Restaurant from './components/restaurants.js';
 import RestaurantsList from './components/restaurants-list.js';
 import Login from './components/login.js';
 
+
 function App() {
-  const [user, setUser] = React.useState(null);
+  const [user, setUser] = useState(null);
 
   async function login(user = null) {
     setUser(user);
@@ -73,8 +75,6 @@ function App() {
       </div>
     </div>
   )
-
-
-}
+};
 
 export default App;

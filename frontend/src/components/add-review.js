@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import RestaurantDataService from '../services/restaurant';
 import { Link, useParams, useLocation } from 'react-router-dom';
 
@@ -14,13 +14,7 @@ const AddReview = props => {
     console.log(currentReview, " currentReview");
     editing = true;
     initialReviewState = currentReview.text;
-  }
-
-  
-  
-  /* console.log(props, " props");
-  console.log(location, " useLocation Hook");
- */
+  };
 
   const [review, setReview] = useState(initialReviewState);
   const [submitted, setSubmitted] = useState(false);
@@ -35,7 +29,7 @@ const AddReview = props => {
       name: props.user.name,
       user_id: props.user.id,
       restaurant_id: id
-    }
+    };
 
     if (editing) {
       data.review_id = currentReview._id 
@@ -58,9 +52,6 @@ const AddReview = props => {
         })
     };
   };
-
-
-  
 
   return (
     <div>

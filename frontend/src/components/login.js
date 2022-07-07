@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const Login = props => {
-
   const initialUserState = {
     name: "",
     id: "",
@@ -57,6 +56,6 @@ const Login = props => {
       </div>
     </div>
   );
-}
+};
 
 export default Login;
