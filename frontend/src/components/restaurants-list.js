@@ -32,7 +32,7 @@ const RestaurantsList = () => {
   const retrieveRestarants = () => {
     RestaurantDataService.getAll()
       .then(response => {
-        console.log(response.data);
+        // console.log(response.data);
         setRestaurants(response.data.restaurants);
       })
       .catch(e => {
@@ -43,7 +43,7 @@ const RestaurantsList = () => {
   const retrieveCuisines = () => {
     RestaurantDataService.getCuisines()
       .then(response => {
-        console.log(response.data);
+        // console.log(response.data);
         setCuisines(["All Cuisines"].concat(response.data));
       })
       .catch(e => {
@@ -58,7 +58,7 @@ const RestaurantsList = () => {
   const find = (query, by) => {
     RestaurantDataService.find(query, by)
       .then(response => {
-        console.log(response.data);
+        // console.log(response.data);
         setRestaurants(response.data.restaurants);
       })
       .catch(e => {
